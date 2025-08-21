@@ -1,0 +1,24 @@
+h1{
+    background-color: rgb(255, 68, 0);
+}
+h2{
+    background-color: rgb(255, 130, 57);
+}
+h3{
+    background-color: rgb(232, 255, 57);
+}
+h4{
+    background-color: rgb(53, 255, 70);
+}
+h5{
+    background-color: rgb(57, 222, 255);
+}
+h6{
+    background-color: rgb(57, 57, 255);
+}
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(0, 0, 0);
+}
+body{
+    background: #909090;
+}

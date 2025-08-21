@@ -1,0 +1,11 @@
+char multi(){
+    return 97;
+}
+int main(){
+    char one ='#';
+    char two[] = "Hello";
+
+    printf("%c\n", two[2]);
+
+    return 0;
+}
