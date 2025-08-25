@@ -12,6 +12,45 @@
             border: 1px solid black;
 
         }
+        .forecast {
+  margin: 0;
+  padding: 0.3rem;
+  background-color: #eeeeee;
+}
+
+.forecast > h1,
+.day-forecast {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.day-forecast {
+  background: right/contain content-box border-box no-repeat
+    url("/shared-assets/images/examples/rain.svg") white;
+}
+
+.day-forecast > h2,
+.day-forecast > p {
+  margin: 0.2rem;
+  font-size: 1rem;
+}
+aside {
+  width: 40%;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
+}
+
+aside > p {
+  margin: 0.5rem;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -40,22 +79,46 @@
 </p>
 
 <pre>
-    <code>
-        #include <stdio.h>
-        int main()
-        {
-            int a,b;
-            printf("enter the value of a and b ");
-            scanf("%d %d ",&a,&b);
-            int sum;
-            sum = a+b;
-            printf("the sum of two number is =%d", &sum);
-            return 0;
-        }
-        <samp>the sum of two number is =____</samp>
-        
-    </code>
-</pre>
+        <code>
+    #include <stdio.h>
+    int main()
+    {
+        int a, b;
+        printf("enter the value of a and b ");
+        scanf("%d %d", &a, &b);
+        int sum;
+        sum = a + b;
+        printf("the sum of two number is =%d", sum);
+        return 0;
+    }
+        </code>
+    </pre>
+
+        <samp> the sum of two number is =____</samp>
+        <article class="forecast">
+  <h1>Weather forecast for Seattle</h1>
+  <article class="day-forecast">
+    <h2>03 March 2018</h2>
+    <p>Rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>04 March 2018</h2>
+    <p>Periods of rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>05 March 2018</h2>
+    <p>Heavy rain.</p>
+  </article>
+</article>
+    </pre>
+<p>heading</p>
+<aside>about me</aside>
+<p>blah blah blah</p>
+<details>
+    <summary>What is HTML?</summary>
+    <p>html is the standard markup language for creating web page</p>
+    
+</details>
 
 </body>
 </html>
