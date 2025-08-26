@@ -8,3 +8,7 @@ kl
 
 kllklklk   
 nvnv
+git add .
+git commit "directly do this if it is already config" (or else first add "git config --global core.editor "nano"      ")
+commit the changes and then enter it 
+lastly do git push origin main
