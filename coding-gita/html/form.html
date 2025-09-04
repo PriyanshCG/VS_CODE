@@ -29,19 +29,28 @@
         <label for="check1">check1</label>
         <input type="checkbox" id="check2" name="checkbox">
         <label for="check1">check2</label>
-<br>
+        <br>
         <input type="button" value="click me"><br>
         <input type="color" name="favoriteColor" value="#ff0000"><br>
         <input type="date" name="bday"><br>
         <input type="month"><br>
         <input type="week"><br>
         <input type="image" src="OIP.jpeg" alt="">
- 
-<br>
+        <input type="range">
+        <input type="range" name="brightness" min="0" max="100" value="50" oninput="output.value = this.value">
+        <output name="output">50</output>
 
-<input type="datetime-local" name="meeting"><br>
+        <br>
+        <input type="search"><br>
+        <input type="tel"  maxlength="10"><br>
+        <input type="time"><br><br>
+        <input type="url" value="url" size="50" readonly><br><br>
+
+        <input type="datetime-local" name="meeting"><br>
         <label for="submit"></label>
         <input type="Submit" value="Submit" id="submit"><br>
+        <input type="reset" value="reset form">
+        <br>
         <input type="number"><br>
 
     </form>
@@ -53,17 +62,66 @@
         <input type="text" id="name"><br><br>
         <label for="email">Email:</label>
         <input type="email" id="email"><br><br>
-        <label for="age" >Age:</label>
+        <label for="age">Age:</label>
         <input type="number" min="0" max="150" id="age"><br><br>
         <label for="">Gender:</label>
-        
-         <input type="radio" id="male" name="Gender">
+
+        <input type="radio" id="male" name="Gender">
         <label for="male">Male</label>
-         <input type="radio" id="female" name="Gender">
+        <input type="radio" id="female" name="Gender">
         <label for="female">Female</label><br><br>
         <label for="submit"></label>
         <input type="submit" name="submit" id="submit">
-    </form><br><br><br>
+    </form><br><br><br><br><br><br><br>
+
+    <h1>Application Form</h1>
+    <br><br>
+    <form action="text">
+        <label for="fname">First Name :-</label>
+        <input type="text" id="fname">
+        <label for="lname">Last Name :-</label>
+        <input type="text" id="lname"><br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob">
+        <label for="age">Age:</label>
+        <input type="number" min="0" max="1500" id="age">
+        <br><br>
+        <label for="male">Gender:-</label>
+
+        <input type="radio" id="male" name="Gender">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="Gender">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="Gender">
+        <label for="other">Other . . .</label>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="enter your email"><br><br>
+
+        <label for="male">Positions Available:</label>
+
+        <input type="radio" id="jd" name="pos">
+        <label for="jd">Juniour Developer</label>
+        <input type="radio" id="md" name="pos">
+        <label for="md">Mid-level Developer</label>
+        <input type="radio" id="sd" name="pos">
+        <label for="sd">Senior Developer</label><br><br>
+
+        <label for="checkbox">Programming Languages:</label>
+
+        <input type="checkbox" name="checkbox" id="java">
+        <label for="java">Java</label>
+        <input type="checkbox" name="checkbox" id="JavaScript">
+        <label for="JavaScript">JavaScript</label>
+        <input type="checkbox" name="checkbox" id="Python">
+        <label for="Python">Python</label><br><br>
+        <label for="pass">Password:</label>
+        <input type="password" placeholder="enter the password" id="pass">
+        <label for="cpass">Confirm Password:</label>
+        <input type="password" placeholder="enter the confirm password" id="cpass"><br><br>
+        <input type="submit">
+        <input type="reset">
+    </form>
 </body>
 
 </html>
