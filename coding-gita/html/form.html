@@ -42,7 +42,7 @@
 
         <br>
         <input type="search"><br>
-        <input type="tel"  maxlength="10"><br>
+        <input type="tel" maxlength="10"><br>
         <input type="time"><br><br>
         <input type="url" value="url" size="50" readonly><br><br>
 
@@ -120,7 +120,75 @@
         <label for="cpass">Confirm Password:</label>
         <input type="password" placeholder="enter the confirm password" id="cpass"><br><br>
         <input type="submit">
-        <input type="reset">
+        <input type="reset"><br><br><br>
+        <section>
+            <label for="fruits">Choose your favorite fruits:</label>
+            <select id="fruits" name="fruits" multiple>
+                <optgroup label="Fruits">
+                    <option value="apple">Apple</option>
+                    <option value="orange">Orange</option>
+                    <option value="banana">Banana</option>
+                    <option value="grape">Grape</option>
+                    <option value="mango">Mango</option>
+                </optgroup>
+                <optgroup label="Cars">
+                    <option value="tesla">Tesla</option>
+                    <option value="bmw">BMW</option>
+                    <option value="audi">Audi</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="toyota">Toyota</option>
+                </optgroup>
+            </select>
+        </section>
+        <input list="browsers" datatype="browser">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+            <option value="Opera">
+        </datalist>
+
+    </form>
+    <br><br><br><br><br><br>
+    <form action="text">
+        <h3>Registration Form</h3><br><br>
+        <label for="fname">First Name:</label>
+        <input type="text" placeholder="enter the first name" id="fname"><br>
+        <label for="lname">Last Name:</label>
+        <input type="text" placeholder="enter the last name" id="lname"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="enter your email"><br>
+        <label for="pass">Password:</label>
+        <input type="password" placeholder="enter the password" id="pass"><br>
+        <label for="male">Gender:-</label><br>
+        <input type="radio" id="male" name="Gender">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="Gender">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="Gender">
+        <label for="other">Other . . .</label><br>
+        <label for="age">Age:</label>
+        <input type="number" min="0" max="1500" id="age"><br>
+        <label for="checkbox">Prefrences:</label><br>
+
+        <input type="checkbox" name="checkbox" id="apaint">
+        <label for="apaint">Acrylic Painting</label><br>
+        <input type="checkbox" name="checkbox" id="opaint">
+        <label for="opaint">Oil Painting</label><br>
+        <input type="checkbox" name="checkbox" id="wpaint">
+        <label for="wpaint">Water Color Painting</label><br>
+        <label for="sp"> Select Occupation:</label>
+        <select id="sp" name="Select Occupation:">
+            <optgroup label="Select Occupation:">
+                <option value="apple">Student</option>
+                <option value="orange">Teacher</option>
+                <option value="banana">Worker</option>
+                <option value="grape">Boss</option>
+            </optgroup>
+        </select><br>
+        bio <textarea placeholder="share few lines about yourself..." name="" id="" cols="30" rows="5"></textarea><br>
+        <input type="submit" value="Submit"> <input type="reset" value="Reset">
     </form>
 </body>
 
