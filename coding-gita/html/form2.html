@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form2</title>
+</head>
+<body>
+    <form action="text">
+        <fieldset>
+            <legend >Login</legend>
+        <label for="name">Username*</label>
+        <input type="text" id="name"><br>
+        <label for="pass">Password*</label>
+        <input type="password" id="pass"><br>
+</fieldset>
+<fieldset>
+<legend>Gender*</legend>
+    <input type="radio" name="gender" id="male">
+    <label for="male">Male</label>
+     <input type="radio" name="gender" id="female">
+    <label for="female">Female</label><br>
+</fieldset>
+<fieldset>
+    <legend>Programming Skill</legend>
+    <input type="checkbox" name="Java" id="java">
+    <label for="java">Java</label>
+    <input type="checkbox" name="C++" id="c" checked>
+    <label for="c">C++</label>
+    <input type="checkbox" name="C#" id="C">
+    <label for="C">C#</label><br>
+</fieldset>
+<fieldset>
+    <legend>Fruit</legend>
+<label for="fruit">Choose a fruit:</label>
+<select name="fruit" id="fruit">
+<option value="banana">Banana</option>
+<option value="apple">Apple</option>
+<option value="mango">Mango</option>
+<option value="peal">Peal</option>
+</select>
+</fieldset>
+
+<textarea name="ta" id="" cols="60" rows="10" placeholder="Enter your comment here"></textarea><br>
+<input type="submit"> <input type="reset">
+    </form>
+</body>
+</html>
