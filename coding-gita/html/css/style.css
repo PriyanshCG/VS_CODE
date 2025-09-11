@@ -12,4 +12,5 @@ h1 {
     background-attachment: scroll;
     background-position: top;
     overflow: scroll;
+    background-size: 500px;
 }
