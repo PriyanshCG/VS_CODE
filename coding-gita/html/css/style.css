@@ -3,11 +3,13 @@ h1 {
     font-size: 20px;
 }
 
-p {
-    background-color: chartreuse;
-    font-size: 10px;
-    color: red;
-}
-body {
-    background-color: rgb(241, 199, 32);
+
+.container{
+    height: 300px;
+    width: 470px;
+    background-image: url("https://tse1.mm.bing.net/th/id/OIP.JvsZrX3Nnkj_Vj8T4iT7MQHaE8?pid=Api");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top;
+    overflow: scroll;
 }
