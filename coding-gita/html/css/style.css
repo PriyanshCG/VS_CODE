@@ -22,6 +22,18 @@ h1 {
     background-image: url("https://tse3.mm.bing.net/th/id/OIP.OF56Jnh46fiSkom2kYIrnQHaEK?pid=Api&P=0&h=180");
     height: 300px;
     width: 470px;
-    background-size: 700px;
+    background-size: cover;
     background-repeat: no-repeat;
+    border: 10px dotted rgb(235, 49, 49);
+    padding: 10px;
+    background-origin: content-box;
+    
+}
+.coriben {
+            background-color: blueviolet; margin-bottom: 1cm ;
+            border: 2px solid black;
+}
+.rioben {
+        background-color: orange; margin-top: 2cm;
+        border: 3px solid blue;
 }
