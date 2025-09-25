@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont th:nth-child(odd){
+            background-color: rgb(0, 0, 0) ;
+            color: aliceblue;
+        }
+        .cont td:nth-child(even){
+            background-color: rgb(0, 0, 0) ;
+            color: aliceblue;
+        } 
+        .p::before{
+            content: "hello";
+            color: blue;
+            display: flex;
+        }
+        .p::selection{
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 47, 255);
+        }
+        table::selection{
+            color: blueviolet;
+            
+        }
+    </style>
+</head>
+<body>
+    <table class="cont" border="2px">
+       
+         <tr>
+        <th>Name</th>
+        <th>Age</th>
+        </tr>
+        <tr>
+        <td>Name</td>
+        <td>Age</td>
+        </tr>
+        <br>
+        
+    </table>
+    <p class="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quos!</p>
+</body>
+</html>
