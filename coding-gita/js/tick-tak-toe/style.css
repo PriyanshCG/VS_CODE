@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    /* background-color: darkcyan; */
+    text-align: center;
+}
+.container{
+    height: 80vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game{
+    height: 70vh;
+    width: 60vh;
+    border: 4px dotted rgb(204, 255, 0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+     gap: 1vmin;
+}
+.btn{
+    width: 18vmin;
+    height: 18vmin;
+    color:crimson  ;
+   
+   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+p{
+    font-size: 50px;
+}
+
+body {
+  animation: rotate-bg-color 10s infinite;
+}
+
+@keyframes rotate-bg-color {
+  0% {
+    background-color: steelblue;
+  }
+  10% {
+    background-color: red;
+  }
+  20% {
+    background-color: orange;
+  }
+  30% {
+    background-color: yellow;
+  }
+  40% {
+    background-color: green;
+  }
+  50% {
+    background-color: blue;
+  }
+  60% {
+    background-color: indigo;
+  }
+  70% {
+    background-color: violet;
+  }
+  80% {
+    background-color: pink;
+  }
+  90% {
+    background-color: brown;
+  }
+  100% {
+    background-color: black;
+  }
+}
