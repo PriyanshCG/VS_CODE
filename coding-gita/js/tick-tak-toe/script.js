@@ -39,7 +39,7 @@ function displayWinner(){
         var btn4 = boxes[a[3]].innerHTML;
         var btn5 = boxes[a[4]].innerHTML;
         var btn6 = boxes[a[5]].innerHTML;
-        if(btn1 && btn2 && btn3 && btn4 && btn5 && btn6){
+        if(btn1!="" && btn2!="" && btn3!="" && btn4!="" && btn5!="" && btn6!=""){
             if(btn1 === btn2 && btn2 === btn3 && btn3 === btn4 && btn4 === btn5 && btn5 === btn6){
                 if(btn1 === "O"){
                     console.log("The winner is Player "+ player1);
