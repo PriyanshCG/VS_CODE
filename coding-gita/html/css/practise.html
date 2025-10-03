@@ -33,7 +33,53 @@
            
            
         }
-        
+        .gradient{
+            
+            border: 2px solid black;
+            height: 200px;
+            width: 200px;
+            background-image: conic-gradient(from 90deg at 50% 50%, rgb(0, 17, 255), yellow, rgb(255, 0, 0), rgb(0, 255, 0));
+        }
+        .shadow{
+            margin-left: 20px;
+            color: rgb(179, 179, 179);
+            text-shadow: -10px -15px 2px orange , 15px 15px 2px green;
+           transform: rotate(45deg) translate(200px,400px);
+            transform: scaleX(1);
+        }
+        .newbox{
+            border: 2px solid black;
+            height: 200px;
+            width: 200px;
+           /* transform: translate3d(50px,20px,30px); */
+          transform: perspective(500px) scale3d(4, 1, 5);
+        }
+.transition-example1 {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  transition: background-color 0.5s ease, width 0.5s ease-in, opacity 0.3s linear; /* Transition background-color over 0.5s */
+}
+.transition-example1:hover {
+  background-color: #ff1900;
+  width: 150px;
+  opacity: 0.8;
+}
+.transition-duration-example1 {
+  width: 100px;
+  height: 100px;
+  background-color: #e67e22;
+  color: white;
+  padding: 10px;
+  transition-property: width;
+  transition-duration: 1s; rotate: 2s; /* 1s duration for width transition */
+}
+.transition-duration-example1:hover {
+  width: 150px;
+  rotate: 20deg;
+}
     </style>
 </head>
 <body>
@@ -41,14 +87,23 @@
         <div id="big1">
             <h1>Div1</h1>
         </div>
-    
+pachi
      <div id="big2">
             <h1>Div2</h1>
-      
     </div>
     <div id="big3">
             <h1>Div3</h1>
     </div>
     </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quas soluta ut, quam beatae qui nisi maxime consequatur et ratione, blanditiis dolore alias necessitatibus natus repellat? Neque optio consequuntur possimus inventore debitis illo et libero cum atque doloribus explicabo tenetur sint, earum vero? Necessitatibus doloribus obcaecati ad minima consequuntur. Reiciendis?   </p>
+    
+    <div class="gradient">
+        hello
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel facere  cupiditate dolorum magnam minima, dolores rem  orem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, possimus similique? Quas id soluta dolor debitis nobis, sapiente omnis odit.
+    </div><br><br><br><br>
+    <h1 class="shadow">INDIA</h1><br>
+    <div class="newbox"></div>
+    <div class="transition-example1">Hover to change background color</div><br>
+    <div class="transition-duration-example1">Hover for slow width change</div>
 </body>
 </html>
