@@ -1,259 +1,182 @@
+// step-1 ->> html:
+
 const colorDisplay = document.querySelector('#colorDisplay');
 const messageDisplay = document.querySelector('#message');
 const currentStreakDisplay = document.querySelector('#currentStreak');
 const bestStreakDisplay = document.querySelector('#bestStreak');
 
 const colorBoxes = document.querySelectorAll('.color-box');
+console.log(colorBoxes);
+
 const newRoundBtn = document.querySelector('#newRoundBtn');
+
 const easyBtn = document.querySelector('#easyBtn');
 const hardBtn = document.querySelector('#hardBtn');
-const resetStreakBtn = document.querySelector('#resetStreakBtn');
+const resetStreakBtn= document.querySelector('#resetStreakBtn');
+const btnTrack =document.querySelector('.color-box-container');
+var newround=document.querySelector('#newRoundBtn');
+const button1 =document.querySelector('#button1')
+const button2 =document.querySelector('#button2')
+const button3 =document.querySelector('#button3')
 
 
-// ========================================
-// Game State Variables
-// ========================================
+// variables...
 
-let colors = []; // Array to store all color options
-let correctColor = ''; // The target color to guess
-let currentStreak = 0; // Current consecutive correct guesses
-let bestStreak = 0; // All-time best streak
-let numColors = 6; // Number of color boxes (3 for easy, 6 for hard)
+var currentStreak = 0;
+var bestStreak = 0;
+var pickCorrectColor = 0;
+let num = 6;
+var colors = []; 
 
 
-// ========================================
-// Initialize Game
-// ========================================
-
-function init() {
-    loadBestStreak();
-    setupGame();
-    updateStreakDisplay();
-}
-
-
-// ========================================
-// localStorage Functions
-// ========================================
-
-// Load best streak from browser storage
-function loadBestStreak() {
-    const saved = localStorage.getItem('colorGameBestStreak');
+function webLoad(){
+    onLoad();
+    setGame();
+    displayContent();
     
-    if (saved !== null) {
-        bestStreak = parseInt(saved);
-    } else {
-        bestStreak = 0;
+}
+// whenever the website will load then first it will load the entire data...
+function onLoad(){
+    var temp = localStorage.getItem('highBestStreak');
+    if(temp != null){
+        bestStreak = parseInt(temp); // --> here the localstorage contains the data so it will return the data not null.
+    }
+    else{
+        bestStreak = 0; // --> if there is no data in localstorage so it will return null instead of number.
     }
 }
 
-// Save best streak to browser storage
-function saveBestStreak() {
-    localStorage.setItem('colorGameBestStreak', bestStreak);
+// here we will define the display content message in a function format...
+
+function displayContent(){
+    currentStreakDisplay.textContent = currentStreak;
+    bestStreakDisplay.textContent = bestStreak;
 }
 
-// Reset best streak
-function resetBestStreak() {
-    const confirmed = confirm('Are you sure you want to reset your best streak?');
+
+// random color generator
+function colorGenerate(){
+    var a = Math.floor(Math.random()*256);
+    var b = Math.floor(Math.random()*256);
+    var c = Math.floor(Math.random()*256);
+    return `rgb(${a}, ${b}, ${c})`;
+}
+
+function generateColor(num){ // stores the six colors too show in the boxes
+    const arr = [];
+    for(var i=0; i<num; i++){
+        arr.push(colorGenerate());
+    }
+
+    return arr;
+    console.log(arr)
+}
+function pickGenerator(){ // it gives  the correct color to choose
+    const math = Math.floor(Math.random()*colors.length);
+    return colors[math];
+}
+
+function setGame(){
+    colors = generateColor(num); 
+    console.log(colors);
     
-    if (confirmed) {
-        bestStreak = 0;
-        currentStreak = 0;
-        localStorage.removeItem('colorGameBestStreak');
-        updateStreakDisplay();
-        messageDisplay.innerText = 'Streak reset! Start fresh!';
+    pickCorrectColor = pickGenerator();
+    console.log(pickCorrectColor);
+    
+    colorDisplay.textContent = pickCorrectColor;
+    for(var i=0; i<colors.length; i++){
+        colorBoxes[i].style.backgroundColor = colors[i];
     }
 }
 
 
-// ========================================
-// Color Generation Functions
-// ========================================
+webLoad();
+//parent addeventlistner\
+//while tracking the parent element to give order to child element then syntak will be without ()
+function trackBtn(event){
+    var element = event.target;//return value on you click
+    console.log(element)
+    var rgb = element.style.backgroundColor;
+    console.log(rgb);
+    if(pickCorrectColor=== rgb){
+        element.style.border="2px solid gold" 
+        setTimeout(()=>{
+            element.style.border="none";
+        },1000)
+      
+       
+       currentStreak++;
+       if(currentStreak==1){
+        messageDisplay.textContent="First Win!!!!"
+       }
+       else{
+        messageDisplay.textContent="you won again play and enjoy"
+       }
 
-// Generate random RGB color
-function generateRandomColor() {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    
-    return `rgb(${r}, ${g}, ${b})`;
-}
-
-// Generate array of random colors
-function generateColors(num) {
-    const colorArray = [];
-    
-    for (let i = 0; i < num; i++) {
-        colorArray.push(generateRandomColor());
-    }
-    
-    return colorArray;
-}
-
-// Pick random color from array as correct answer
-function pickCorrectColor() {
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    return colors[randomIndex];
-}
-
-
-// ========================================
-// Game Setup Functions
-// ========================================
-
-// Setup new game round
-function setupGame() {
-    // Generate new colors
-    colors = generateColors(numColors);
-    
-    // Pick correct answer
-    correctColor = pickCorrectColor();
-    
-    // Display RGB value to guess
-    colorDisplay.innerText = correctColor.toUpperCase();
-    
-    // Reset message
-    messageDisplay.innerText = 'Pick a color!';
-    messageDisplay.style.color = 'white';
-    
-    // Reset and assign colors to boxes
-    colorBoxes.forEach(function(box, index) {
-        if (index < numColors) {
-            // Show box and assign color
-            box.style.display = 'block';
-            box.style.backgroundColor = colors[index];
-            box.classList.remove('fade');
-        } else {
-            // Hide extra boxes (for easy mode)
-            box.style.display = 'none';
-        }
-    });
-}
-
-
-// ========================================
-// Game Logic Functions
-// ========================================
-
-// Handle color box click
-function handleColorClick(event) {
-    const clickedBox = event.target;
-    const clickedColor = clickedBox.style.backgroundColor;
-    
-    // Check if clicked color matches correct answer
-    if (clickedColor === correctColor) {
-        // Correct answer!
-        handleCorrectGuess(clickedBox);
+       currentStreakDisplay.textContent = currentStreak;
+      if(currentStreak>bestStreak){
+        bestStreak=currentStreak;
+        colorDisplay.style.fontWeight ='bold';
         
-    } else {
-        // Wrong answer!
-        handleWrongGuess(clickedBox);
+        bestStreakDisplay.textContent=bestStreak;
+        localStorage.setItem('highBestStreak',bestStreak)
+      }
+      if(currentStreak>=3){
+        messageDisplay.textContent="STREAKKKKKKK!";
+      }
+        webLoad()       
+       
     }
-}
-
-// Handle correct guess
-function handleCorrectGuess(clickedBox) {
-    // Update streak
-    currentStreak++;
-   
-    // Check for new best streak
-    if (currentStreak > bestStreak) {
-        bestStreak = currentStreak;
-        saveBestStreak();
-        messageDisplay.innerText = '🎉 NEW BEST STREAK! 🎉';
-    } else {
-        messageDisplay.innerText = 'Correct! 🎯';
+    else{
+        messageDisplay.textContent="you can even choose a right color "
+        currentStreak=0;
+        currentStreakDisplay.textContent=currentStreak
+         element.classList.add('shake')
+         setTimeout(()=>{
+            element.classList.remove('shake')
+         },1000)
     }
     
-    messageDisplay.style.color = '#4ECDC4';
+}
+btnTrack.addEventListener('click',trackBtn);
 
-   
+function reset(){
+    messageDisplay.textContent="pick the right color";
+    setGame();
+    currentStreak=0;
+    currentStreakDisplay.textContent=currentStreak;
+
+}
+newRoundBtn.addEventListener('click',reset)
+
+function gamerest(){
+    localStorage.removeItem('highBestStreak')
+    bestStreakDisplay.textContent=0;
+}
+resetStreakBtn.addEventListener('click',gamerest)
+
+function easy(){
+    webLoad()
+    easyBtn.style.backgroundColor='green'
+    num=3;
+    button1.style.display='none';
+    button2.style.display='none';
+    button3.style.display='none';
+  
     
-    // Make all boxes show correct color (visual feedback)
-    colorBoxes.forEach(function(box) {
-        box.style.backgroundColor = correctColor;
-    });
-    
-    // Change header background to correct color
-    document.querySelector('header').style.backgroundColor = correctColor;
-    
-    // Update displays
-    updateStreakDisplay();
-    
-    // Enable new round button
-    newRoundBtn.innerText = 'Next Round';
+
 }
 
-// Handle wrong guess
-function handleWrongGuess(clickedBox) {
-    // Reset current streak
-    currentStreak = 0;
+easyBtn.addEventListener('click',easy)
+
+function hard(){
+    webLoad()
+    num=6;
+    easyBtn.style.backgroundColor='rgba(255, 255, 255, 0.1)'
+    button1.style.display='block';
+    button2.style.display='block';
+    button3.style.display='block';
     
-    // Update display
-    updateStreakDisplay();
-    
-    // Fade out wrong box
-    clickedBox.classList.add('fade');
-    
-    // Show feedback
-    messageDisplay.innerText = 'Try Again!';
-    messageDisplay.style.color = '#FF6B6B';
+
 }
-
-// Update streak display
-function updateStreakDisplay() {
-    currentStreakDisplay.innerText = currentStreak;
-    bestStreakDisplay.innerText = bestStreak;
-}
-
-
-// ========================================
-// Difficulty Mode Functions
-// ========================================
-
-// Set easy mode (3 colors)
-function setEasyMode() {
-    numColors = 3;
-    easyBtn.classList.add('selected');
-    hardBtn.classList.remove('selected');
-    setupGame();
-}
-
-// Set hard mode (6 colors)
-function setHardMode() {
-    numColors = 6;
-    hardBtn.classList.add('selected');
-    easyBtn.classList.remove('selected');
-    setupGame();
-}
-
-
-// ========================================
-// Event Listeners
-// ========================================
-
-// Add click listener to each color box
-colorBoxes.forEach(function(box) {
-    box.addEventListener('click', handleColorClick);
-});
-
-// New round button
-newRoundBtn.addEventListener('click', function() {
-    setupGame();
-    document.querySelector('header').style.backgroundColor = '';
-    newRoundBtn.innerText = 'New Round';
-});
-
-// Difficulty buttons
-easyBtn.addEventListener('click', setEasyMode);
-hardBtn.addEventListener('click', setHardMode);
-
-// Reset streak button
-resetStreakBtn.addEventListener('click', resetBestStreak);
-
-
-// ========================================
-// Start Game on Page Load
-// ========================================
-
-init();
+hardBtn.addEventListener('click',hard)
