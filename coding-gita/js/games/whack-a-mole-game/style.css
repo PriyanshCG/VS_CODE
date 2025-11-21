@@ -108,7 +108,7 @@ h1 {
     transform: translateX(-50%);
     transition: bottom 0.2s;
 }
-.scoreboard {
+.scoreboard { 
   display: flex;
   gap: 15px;
   justify-content: center;
