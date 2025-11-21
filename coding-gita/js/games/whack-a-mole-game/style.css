@@ -18,7 +18,7 @@ body {
     background: white;
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(63, 15, 15, 0.3);
     max-width: 700px;
     width: 100%;
 }
@@ -108,6 +108,13 @@ h1 {
     transform: translateX(-50%);
     transition: bottom 0.2s;
 }
+.scoreboard {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap; /* allow lines to wrap for many boxes */
+  margin-bottom: 20px;
+}
 
 .mole::before {
     content: '🐹';
@@ -125,66 +132,6 @@ h1 {
 .mole.bonked {
     bottom: -100%;
 }
-
-.button-container {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  
-  margin-bottom: 20px;
-}
-.bnt{
-    display: flex;
-    justify-content: center;
-}
-
-.resume-btn {
-  margin-left: 20px;
-  padding: 15px;
-  margin-bottom: 22px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.pause-btn{
-  margin-right: 20px;
-  padding: 15px;
-  margin-bottom: 22px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.pause-btn {
-  background: #ff6b6b;
-}
-
-.pause-btn:hover {
-  background: #ff5252;
-}
-
-.resume-btn {
-  background: #45b8b0;
-}
-
-.resume-btn:hover {
-  background: #35a69f;
-}
-
-.pause-btn:disabled,
-.resume-btn:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
 
 @media (max-width: 600px) {
     .game-board {
