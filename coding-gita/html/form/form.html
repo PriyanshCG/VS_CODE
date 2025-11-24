@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <form action="text">
+        <label for="name">Name</label>
+        <input type="text" id="name"><br>
+        <label for="pass">Password</label>
+        <input type="password" id="pass"><br>
+        <label for="email">Email</label>
+        <input type="email" id="email"><br>
+        <input type="radio" name="mcq" id="option1" checked>
+        <label for="option1">Html</label>
+        <input type="radio" name="mcq" id="option2">
+        <label for="option2">css</label>
+        <input type="radio" name="mcq" id="option3">
+        <label for="option3">js</label>
+        <input type="radio" name="mcq" id="option4">
+        <label for="option4">c</label>
+        <br>
+        <input type="checkbox" id="check1" name="checkbox">
+        <label for="check1">check1</label>
+        <input type="checkbox" id="check2" name="checkbox">
+        <label for="check1">check2</label>
+        <br>
+        <input type="button" value="click me"><br>
+        <input type="color" name="favoriteColor" value="#ff0000"><br>
+        <input type="date" name="bday"><br>
+        <input type="month"><br>
+        <input type="week"><br>
+        <input type="image" src="OIP.jpeg" alt="">
+        <input type="range">
+        <input type="range" name="brightness" min="0" max="100" value="50" oninput="output.value = this.value">
+        <output name="output">50</output>
+
+        <br>
+        <input type="search"><br>
+        <input type="tel" maxlength="10"><br>
+        <input type="time"><br><br>
+        <input type="url" value="url" size="50" readonly><br><br>
+
+        <input type="datetime-local" name="meeting"><br>
+        <label for="submit"></label>
+        <input type="Submit" value="Submit" id="submit"><br>
+        <input type="reset" value="reset form">
+        <br>
+        <input type="number"><br>
+
+    </form>
+
+    <br><br><br>
+    <h1>Form</h1>
+    <form action="text">
+        <label for="name">Name:</label>
+        <input type="text" id="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email"><br><br>
+        <label for="age">Age:</label>
+        <input type="number" min="0" max="150" id="age"><br><br>
+        <label for="">Gender:</label>
+
+        <input type="radio" id="male" name="Gender">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="Gender">
+        <label for="female">Female</label><br><br>
+        <label for="submit"></label>
+        <input type="submit" name="submit" id="submit">
+    </form><br><br><br><br><br><br><br>
+
+    <h1>Application Form</h1>
+    <br><br>
+    <form action="text">
+        <label for="fname">First Name :-</label>
+        <input type="text" id="fname">
+        <label for="lname">Last Name :-</label>
+        <input type="text" id="lname"><br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob">
+        <label for="age">Age:</label>
+        <input type="number" min="0" max="1500" id="age">
+        <br><br>
+        <label for="male">Gender:-</label>
+
+        <input type="radio" id="male" name="Gender">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="Gender">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="Gender">
+        <label for="other">Other . . .</label>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="enter your email"><br><br>
+
+        <label for="male">Positions Available:</label>
+
+        <input type="radio" id="jd" name="pos">
+        <label for="jd">Juniour Developer</label>
+        <input type="radio" id="md" name="pos">
+        <label for="md">Mid-level Developer</label>
+        <input type="radio" id="sd" name="pos">
+        <label for="sd">Senior Developer</label><br><br>
+
+        <label for="checkbox">Programming Languages:</label>
+
+        <input type="checkbox" name="checkbox" id="java">
+        <label for="java">Java</label>
+        <input type="checkbox" name="checkbox" id="JavaScript">
+        <label for="JavaScript">JavaScript</label>
+        <input type="checkbox" name="checkbox" id="Python">
+        <label for="Python">Python</label><br><br>
+        <label for="pass">Password:</label>
+        <input type="password" placeholder="enter the password" id="pass">
+        <label for="cpass">Confirm Password:</label>
+        <input type="password" placeholder="enter the confirm password" id="cpass"><br><br>
+        <input type="submit">
+        <input type="reset"><br><br><br>
+        <section>
+            <label for="fruits">Choose your favorite fruits:</label>
+            <select id="fruits" name="fruits" multiple>
+                <optgroup label="Fruits">
+                    <option value="apple">Apple</option>
+                    <option value="orange">Orange</option>
+                    <option value="banana">Banana</option>
+                    <option value="grape">Grape</option>
+                    <option value="mango">Mango</option>
+                </optgroup>
+                <optgroup label="Cars">
+                    <option value="tesla">Tesla</option>
+                    <option value="bmw">BMW</option>
+                    <option value="audi">Audi</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="toyota">Toyota</option>
+                </optgroup>
+            </select>
+        </section>
+        <input list="browsers" datatype="browser">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+            <option value="Opera">
+        </datalist>
+
+    </form>
+    <br><br><br><br><br><br>
+    <form action="text">
+        <h3>Registration Form</h3><br><br>
+        <label for="fname">First Name:</label>
+        <input type="text" placeholder="enter the first name" id="fname"><br>
+        <label for="lname">Last Name:</label>
+        <input type="text" placeholder="enter the last name" id="lname"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="enter your email"><br>
+        <label for="pass">Password:</label>
+        <input type="password" placeholder="enter the password" id="pass"><br>
+        <label for="male">Gender:-</label><br>
+        <input type="radio" id="male" name="Gender">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="Gender">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="Gender">
+        <label for="other">Other . . .</label><br>
+        <label for="age">Age:</label>
+        <input type="number" min="0" max="1500" id="age"><br>
+        <label for="checkbox">Prefrences:</label><br>
+
+        <input type="checkbox" name="checkbox" id="apaint">
+        <label for="apaint">Acrylic Painting</label><br>
+        <input type="checkbox" name="checkbox" id="opaint">
+        <label for="opaint">Oil Painting</label><br>
+        <input type="checkbox" name="checkbox" id="wpaint">
+        <label for="wpaint">Water Color Painting</label><br>
+        <label for="sp"> Select Occupation:</label>
+        <select id="sp" name="Select Occupation:">
+            <optgroup label="Select Occupation:">
+                <option value="apple">Student</option>
+                <option value="orange">Teacher</option>
+                <option value="banana">Worker</option>
+                <option value="grape">Boss</option>
+            </optgroup>
+        </select><br>
+        bio <textarea placeholder="share few lines about yourself..." name="" id="" cols="30" rows="5"></textarea><br>
+        <input type="submit" value="Submit"> <input type="reset" value="Reset">
+    </form>
+    <script src="jully.js"></script>
+</body>
+
+</html>

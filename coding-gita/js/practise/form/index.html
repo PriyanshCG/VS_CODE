@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="Form">
+    <h1>Registration Form</h1>
+
+    <form id="regForm">
+
+      <div class="input-group">
+        <label for="nameInput">Full Name</label>
+        <input id="nameInput" type="text" placeholder="Enter your name" />
+        <div id="nameError" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="emailInput">Email Address</label>
+        <input id="emailInput" type="email" placeholder="Enter your email" />
+        <div id="emailError" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="ageInput">Age</label>
+        <input id="ageInput" type="number" placeholder="Enter your age" min="1" max="120" />
+        <div id="ageError" class="error-message"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="addressInput">Address</label>
+        <input id="addressInput" type="text" placeholder="Enter your address" />
+        <div id="addressError" class="error-message"></div>
+      </div>
+
+      <button type="submit" id="submitBtn">Submit</button>
+
+    </form>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

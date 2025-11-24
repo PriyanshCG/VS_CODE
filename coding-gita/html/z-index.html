@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+            background-color: rgb(255, 79, 79);
+            height: 150px;
+            width: 150px;
+            position: relative;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            font-size: 50px;
+
+        }
+        .container2:hover{
+            background-color: aquamarine;
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            top: 60px;
+            left: 50px;
+            margin: 20px;
+            overflow: scroll;
+            display: flex;
+            justify-content: center;
+            font-size: 50px;
+            
+        }
+        div p{
+            color: blue;
+        }
+        .tranform{
+            border: 2px solid black;
+            background-color: rgb(94, 94, 231);
+            height: 200px;
+            width: 200px;
+            transform: perspective(700px) scale3d(1.5, 1,2) rotateY(45deg);
+        }
+        .tranform1{
+            border: 2px solid black;
+            background-color: rgb(94, 94, 231);
+            height: 200px;
+            width: 200px;
+            transform: perspective(700px) scale3d(1.5, 1,2) rotateY(-45deg);
+        }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.keyframes-example1 {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  animation: fadeIn 3s ease;
+}
+@keyframes slideIn {
+  0% { transform: translateX(-100px); }
+  100% { transform: translateX(0); }
+}
+.keyframes-example2 {
+  width: 100px;
+  height: 100px;
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px;
+  animation: slideIn 3s ease;
+}
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scale {
+  from { transform: scale(3); }
+  to { transform: scale(1); }
+}
+.animation-name-example2 {
+  width: 100px;
+  height: 100px;
+  background-color: #f1c40f;
+  color: black;
+  padding: 10px;
+  animation-name: fade, scale;
+  animation-duration: 0.5s, 0.5s;
+}
+@keyframes quickFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animation-duration-example1 {
+  width: 100px;
+  height: 100px;
+  background-color: #9b59b6;
+  color: white;
+  padding: 10px;
+  animation-name: quickFade;
+  animation-duration: 0.3s; 
+}
+@keyframes slowSlide {
+  from { transform: translateX(-50px); }
+  to { transform: translateX(0); }
+}
+.animation-duration-example2 {
+  width: 100px;
+  height: 100px;
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px;
+  animation-name: slowSlide;
+  animation-duration: 2s; 
+}
+@keyframes delayedFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animation-delay-example1 {
+  width: 100px;
+  height: 100px;
+  background-color: #e67e22;
+  color: white;
+  padding: 10px;
+  animation-name: delayedFade;
+  animation-duration: 0.5s;
+  animation-delay: 1s; 
+}
+@keyframes slideEffect {
+  from { transform: translateX(-50px); }
+  to { transform: translateX(0); }
+}
+.animation-delay-example2 {
+  width: 100px;
+  height: 100px;
+  background-color: #34495e;
+  color: white;
+  padding: 10px;
+  animation-name: slideEffect;
+  animation-duration: 1s;
+  animation-delay: -0.1s; /* Starts 0.3s into animation */
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.animation-iteration-example1 {
+  width: 100px;
+  height: 100px;
+  background-color: #c0392b;
+  color: white;
+  padding: 10px;
+  animation-name: pulse;
+  animation-duration: 0.5s;
+  animation-iteration-count: 3; /* Repeats 3 times */
+}
+@keyframes slideBackForth {
+  from { transform: translateX(0); }
+  to { transform: translateX(250px); }
+}
+.animation-direction-example1 {
+  width: 100px;
+  height: 100px;
+  background-color: #27ae60;
+  color: white;
+  padding: 10px;
+  animation-name: slideBackForth;
+  animation-duration: 0.5s;
+  animation-iteration-count: 5;
+  animation-direction: alternate;
+  animation-fill-mode: forwards; 
+}
+@keyframes fadeReverse {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animation-direction-example2 {
+  width: 100px;
+  height: 100px;
+  background-color: #d35400;
+  color: white;
+  padding: 10px;
+  animation-name: fadeReverse;
+  animation-duration: 0.5s;
+  animation-iteration-count: 2;
+  animation-direction: reverse; /* Plays backward */
+}
+@keyframes slideEaseIn {
+  from { transform: translateX(0); }
+  to { transform: translateX(50px); }
+}
+.animation-timing-example1 {
+  width: 100px;
+  height: 100px;
+  background-color: #16a085;
+  color: white;
+  padding: 10px;
+  animation-name: slideEaseIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in; /* Slow start, fast finish */
+}
+@keyframes scaleBouncy {
+  from { transform: scale(1); }
+  to { transform: scale(1.5); }
+}
+.animation-timing-example2 {
+  width: 100px;
+  height: 100px;
+  background-color: #8d5524;
+  color: white;
+  padding: 10px;
+  animation-name: scaleBouncy;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bouncy effect */
+}
+@keyframes fadeStay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animation-fill-example1 {
+  width: 100px;
+  height: 100px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  animation-name: fadeStay;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards; /* Retains final opacity */
+}
+    </style>
+</head>
+<body>
+    <div  class="container1">HI</div>
+    <div  class="container2">HI</div><br><br>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div class="tranform"></div>
+    <div class="tranform1"></div><br>
+    <div class="keyframes-example1">Fade in animation</div>
+    <div class="keyframes-example2">Slide in from left</div>
+    <div class="animation-name-example2">Fade and scale effect</div>
+    <div class="animation-duration-example1">Fast fade animation</div>
+    <div class="animation-duration-example2">Slow slide animation</div>
+    <div class="animation-delay-example1">Delayed fade in</div>
+    <div class="animation-delay-example2">Negative delay slide</div>
+    <div class="animation-iteration-example1">Pulse 3 times</div>
+    <div class="animation-direction-example1">Alternate slide animation</div>
+    <div class="animation-direction-example2">Reverse fade animation</div>
+    <div class="animation-timing-example1">Ease-in slide animation</div>
+    <div class="animation-timing-example2">Bouncy scale animation</div>
+    <div class="animation-fill-example1">Fade and stay opaque</div>
+</body>
+</html>

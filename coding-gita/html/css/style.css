@@ -1,0 +1,46 @@
+
+
+.container{
+    height: 300px;
+    width: 470px;
+    background-image: url("https://tse1.mm.bing.net/th/id/OIP.JvsZrX3Nnkj_Vj8T4iT7MQHaE8?pid=Api");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top;
+    overflow: scroll;
+    background-size: 500px;
+    border-style: solid;
+    border-width: 20px;
+    border-color: lab(22.4% 39.62 27.09);
+    padding: 10px;
+}
+.opop {
+    background-image: url("https://tse3.mm.bing.net/th/id/OIP.OF56Jnh46fiSkom2kYIrnQHaEK?pid=Api&P=0&h=180");
+    height: 300px;
+    width: 470px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 10px dotted rgb(235, 49, 49);
+    padding: 10px;
+    background-origin: content-box;
+    
+}
+.coriben {
+            background-color: blueviolet; margin-bottom: 1cm ;
+            border: 2px solid black;
+}
+.rioben {
+        background-color: orange; margin-top: 2cm;
+        border: 3px solid blue;
+}
+h1 {
+    text-shadow: 3px 3px 5px red, -3px -3px 5px rgb(0, 8, 255); ; 
+}   
+#triku{
+    height: 100px;
+    width: 100px;
+    background: url(../OIP.jpeg)center/cover no-repeat;
+}
+#triku:hover{
+    background: url(../OIP.jpeg);
+}
