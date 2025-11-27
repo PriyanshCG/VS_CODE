@@ -1,4 +1,4 @@
-//1 to 10
+//q11 1 to 10
 
     // let str=" ";
     // for(num=1; num<=10; num++){
@@ -7,7 +7,7 @@
     // console.log(str);
 
 
-//1 to N
+//q12 1 to N
 
 // function oneton(numb){
 //     let str=" ";
@@ -18,7 +18,7 @@
 // }
 // oneton(12);
 
-// onetoneven
+//q13 onetoneven
 
 // function onetoneven(numbe){
 //     let str=" ";
@@ -31,7 +31,7 @@
 // }
 // onetoneven(15);
 
-//onetonodd
+//q14 onetonodd
 
 // function onetonodd(number){
 //     let str="";
@@ -44,7 +44,7 @@
 // }
 // onetonodd(15);
 
-//sum 1 to n
+//q15 sum 1 to n
 
 // function sumoneton(num1){
 //     let sum = 0;
@@ -57,7 +57,7 @@
 // sumoneton(10)
 
 
-//product 1 to n
+//q16 product 1 to n
 
 // function prodoneton(num2){
 //     let prod=1;
@@ -68,18 +68,52 @@
 // }
 // prodoneton(5);
 
-//mul table of number
+//q17 mul table of number
 
-function table(num3){
-    let str=" ";
-    for(let i = 1; i <= 10; i++){
-        str=str+(i*num3)+" ";
+// function table(num3){
+//     let str=" ";
+//     for(let i = 1; i <= 10; i++){
+//         str=str+(i*num3)+" ";
        
-    }
-     console.log(str);
+//     }
+//      console.log(str);
+// }
+// table(5);
+
+
+//q18 count number divisible by 3
+
+// function countDivisibleBy3(N) {
+//     let count = 0;
+//     for (let i = 1; i <= N; i++) {
+//         if (i % 3 === 0) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+
+// const input = parseInt(prompt("Give N: "));
+// console.log(countDivisibleBy3(input));
+
+
+
+// Q19 Factorial (Iterative)
+
+// const input = parseInt(prompt("Give N : "));
+// let multi = 1;
+
+// for(let i=1; i<=input; i++){
+//     multi = multi*i;
+// }
+// console.log(multi);
+
+
+
+// Q20  First N Multiples of 7
+
+const input = parseInt(prompt("Give N : "));
+
+for (let i = 1; i <= input; i++) {
+    console.log(7 * i);
 }
-table(5);
-
-
-//count number divisible by 3
-
