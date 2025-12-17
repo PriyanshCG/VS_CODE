@@ -64,7 +64,7 @@
 // console.log(found); 
 
 
-//short method
+// short method
 // let arr = [1, 2, 3];
 // let value = 2;
 
@@ -87,8 +87,8 @@
 
 
 //67
-// let arr = [1, 2, 2, 3, 2];
-// let value = 2;
+// let arr = [1, 2, 2, 3, 2,3,3,3,4,5,7,9];
+// let value = 3;
 // let count = 0;
 // for (let i = 0; i < arr.length; i++) {
 //     if (arr[i] === value) {
@@ -96,6 +96,21 @@
 //     }
 // }
 // console.log(count); 
+
+
+//67
+// let obj={};
+// for(let i=0;i<arr.length;i++){
+// if(obj[arr[i]]!=undefined) {
+// obj[arr[i]]++
+// }
+
+// else{
+// obj[arr[i]]=1;
+// }
+// }
+// console.log(obj[value]);
+
 
 
 //68
@@ -112,3 +127,44 @@
 // console.log(sorted);   
 
 
+//69
+// let arr = [10, 5, 8, 20];
+// let largest = arr[0];
+// let second = arr[1];
+// if (second > largest) {
+//   let temp = largest;
+//   largest = second;
+//   second = temp;
+// }
+// for (let i = 2; i < arr.length; i++) {
+//   if (arr[i] > largest) {
+//     second = largest;
+//     largest = arr[i];
+//   } else if (arr[i] > second) {
+//     second = arr[i];
+//   }
+// }
+// console.log(second);
+
+
+
+//70
+// let arr = [10, 5, 8, 20];
+// let small = arr[0];
+// let second = arr[1];
+// // arrange them properly
+// if (second < small) {
+//   let temp = small;
+//   small = second;
+//   second = temp;
+// }
+// for (let i = 2; i < arr.length; i++) {
+//   if (arr[i] < small) {
+//     second = small;
+//     small = arr[i];
+//   } 
+//   else if (arr[i] < second && arr[i] !== small) {
+//     second = arr[i];
+//   }
+// }
+// console.log(second);
