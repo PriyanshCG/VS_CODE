@@ -162,7 +162,7 @@
 
 
 // Q120
-function area(r){
-    return (3.14 * r**2).toFixed(2);
-}
-console.log(area(1));
+// function area(r){
+//     return (3.14 * r**2).toFixed(2);
+// }
+// console.log(area(1));
