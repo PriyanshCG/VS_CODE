@@ -1,4 +1,4 @@
-//61
+//61 Double Each Element
 // let arr = [1, 2, 3];
 // let result = [];
 // for (let i = 0; i < arr.length; i++) {
@@ -7,7 +7,7 @@
 // console.log(result);
 
 
-//62
+//62  Square Each Element
 // let arr = [1, 2, 3];
 // let result = [];
 // for (let i = 0; i < arr.length; i++) {
@@ -16,7 +16,7 @@
 // console.log(result);
 
 
-//63
+//63  Reverse Array into New Array
 // let arr = [1, 2, 3];
 // let rev = [];
 // let lastIndex = arr.length - 1;
@@ -40,7 +40,7 @@
 // }
 // console.log(arr)
 
-//64
+//64 Copy Array
 // let arr = [1, 2, 3];
 // let copy = [];
 // for (let i = 0; i < arr.length; i++) {
@@ -49,7 +49,7 @@
 // console.log(copy);
 
 
-//65
+//65 Check if Array Contains a Value
 // let arr = [1, 2, 3];
 // let value = 2;
 // let found = false;
@@ -71,7 +71,7 @@
 // console.log(arr.includes(value));
 
 
-//66
+//66 Find Index of a Value
 // let arr = [10, 20, 30];
 // let value = 20;
 // let index = -1;
@@ -98,7 +98,7 @@
 // console.log(count); 
 
 
-//67
+//67 Frequency of a Value
 // let obj={};
 // for(let i=0;i<arr.length;i++){
 // if(obj[arr[i]]!=undefined) {
@@ -113,7 +113,7 @@
 
 
 
-//68
+//68  Check if Array is Sorted (Increasing)
 // let arr = [1, 2, 3, 4];
 // let sorted = true;
 
@@ -127,7 +127,7 @@
 // console.log(sorted);   
 
 
-//69
+//69  Second Largest Element
 // let arr = [10, 5, 8, 20];
 // let largest = arr[0];
 // let second = arr[1];
@@ -148,7 +148,7 @@
 
 
 
-//70
+//70 Second Smallest Element
 // let arr = [10, 5, 8, 20];
 // let small = arr[0];
 // let second = arr[1];

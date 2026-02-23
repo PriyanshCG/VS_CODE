@@ -1,4 +1,4 @@
-//81
+//81  Square Pattern of * of Size N
 // function number(n) {
 
 //   for (let i = 1; i <= n; i++) {
@@ -13,7 +13,7 @@
 // number(3);
 
 
-//82
+//82 Right-Angled Triangle of *
 // function triangle(n) {
 //   for (let i = 1; i <= n; i++) {
 //     let row = "";
@@ -27,7 +27,7 @@
 // triangle(4);
 
 
-//83
+//83 Number Triangle Increasing Each Row
 // function numberTriangle(n) {
 //   for (let i = 1; i <= n; i++) {
 //     let row = "";
@@ -41,7 +41,7 @@
 // numberTriangle(4);
 
 
-//84
+//84 Triangle with Repeated Row Number
 // function numberTriangle(n) {
 //   for (let i = 1; i <= n; i++) {
 //     let row = "";
@@ -54,7 +54,7 @@
 
 // numberTriangle(4);
 
-//85
+//85 Print Multiplication Tables from 1 to 10
 // function printTables() {
 //   for (let i = 1; i <= 10; i++) {
 //     console.log("Table of " + i + ":");
@@ -71,7 +71,7 @@
 // printTables();
 
 
-//86
+//86 Sum of Each Row in 2D Array
 // let arr = [[1, 2, 3], [4, 5, 6]];
 // let result = [];
 // for (let i = 0; i < arr.length; i++) {
@@ -84,7 +84,7 @@
 // console.log(result);
 
 
-//87
+//87 Check Perfect Square
 // let n = 16;
 // let root = Math.sqrt(n);
 // if (root * root === n) {
@@ -103,7 +103,7 @@
 // console.log("not a perfect square");
 
 
-//88
+//88 Armstrong Number (3-digit)
 // let number =153;
 // let arr=String(number).split("");
 // let res =0;
@@ -118,7 +118,7 @@
 // }
 
 
-//89
+//89 Length of Each String in Array
 // let arr = ["hi", "hello", "a"];
 // let result = [];
 
@@ -141,7 +141,7 @@
 // main(["Hello", "he", "the"]);
 
 
-//90
+//90 Longest String in Array
 // let arr = ["hi", "hello", "hey"];
 // let longest = arr[0];
 
@@ -154,17 +154,17 @@
 
 
 //other way
-function main(arr){
-  let n = length(arr);
-  let res = "";
-  let maxLength=0
-  for(let i = 0; i < n; i++){
-    let stringLength=length(arr[i]);
-    if(stringLength>maxLength){
-      res=arr[i];
-      maxLength=stringLength;
-    }
-  }
-  console.log(res);
-}
-main(["Hello", "he", "the"]);
+// function main(arr){
+//   let n = length(arr);
+//   let res = "";
+//   let maxLength=0
+//   for(let i = 0; i < n; i++){
+//     let stringLength=length(arr[i]);
+//     if(stringLength>maxLength){
+//       res=arr[i];
+//       maxLength=stringLength;
+//     }
+//   }
+//   console.log(res);
+// }
+// main(["Hello", "he", "the"]);

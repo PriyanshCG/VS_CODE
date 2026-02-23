@@ -1,33 +1,20 @@
 //q41
 
 
-// function countWords(str) {
-//   let count = 0;
-//   let prev = " ";
-//   for (let i = 0; i < str.length; i++) {
-//     let ch = str[i];
-//     if (ch !== " " && prev === " ") {
-//       count++;
-//     }
-//     prev = ch; 
-//   }
-//   return count;
-// }
+function countWords(str) {
+  let count = 0;
+  let prev = " ";
+  for (let i = 0; i < str.length; i++) {
+    let ch = str[i];
+    if (ch !== " " && prev === " ") {
+      count++;
+    }
+    prev = ch; 
+  }
+  return count;
+}
 
-// console.log(countWords("  JavaScript  is  fun"));    // 3
-
-
-// let str = "   Hell   World   "
-// let count = 0;
-// for (let i = 0; i < str.length; i++) {
-//     if (i == 0 && str[i] != "") {
-//         count++;
-//     }
-//     else if (str[i] != " " && str[i - 1] == " ") {
-//         count++
-//     }
-// }
-// console.log(count)
+console.log(countWords("  JavaScript  is  fun"));    
 
 
 
@@ -170,20 +157,20 @@
 // console.log(result);  
 
 
-//50
-// let str = "HeLLo";
-// let result = "";
+50
+let str = "HeLLo";
+let result = "";
 
-// for (let i = 0; i < str.length; i++) {
-//   let ch = str[i];
+for (let i = 0; i < str.length; i++) {
+  let ch = str[i];
 
-//   if (ch >= "a" && ch <= "z") {
-//     result += ch.toUpperCase();
-//   } else if (ch >= "A" && ch <= "Z") {
-//     result += ch.toLowerCase();
-//   } else {
-//     result += ch; 
-//   }
-// }
+  if (ch >= "a" && ch <= "z") {
+    result += ch.toUpperCase();
+  } else if (ch >= "A" && ch <= "Z") {
+    result += ch.toLowerCase();
+  } else {
+    result += ch; 
+  }
+}
 
-// console.log(result);  
+console.log(result);  

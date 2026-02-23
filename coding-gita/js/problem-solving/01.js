@@ -5,6 +5,7 @@ function evenOddCheck(n1){
         console.log(n1,"is Even");
     } else{
         console.log(n1 , "is Odd");
+        
     }
 }
 evenOddCheck(33);

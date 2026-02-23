@@ -1,10 +1,10 @@
-//71
+//71 Remove Even Numbers (Keep Only Odd)
 //method1
 // let arr = [1, 2, 3, 4, 5];
-let res2 = arr.filter((value)=>{
-return value%2!= 8;
-})
-console.log(res2);
+// let res2 = arr.filter((value)=>{
+// return value%2!= 8;
+// })
+// console.log(res2);
  
 
 //method2
@@ -27,6 +27,7 @@ console.log(res2);
 // }
 
 
+//72 Remove Duplicates
 // function removeDuplicates(arr) {
 // //     let b = {};
 // //     let result = [];
@@ -43,7 +44,7 @@ console.log(res2);
 // // console.log(removeDuplicates(input))
 
 
-//73
+//73 Concatenate Two Arrays
 // let array = [1,2,3,4];
 // let array2 = [5,6,7,8];
 // let combo = array.concat(array2);
@@ -64,7 +65,7 @@ console.log(res2);
 
 
 
-//74
+//74 Intersection of Two Arrays (Common Elements)
 // let arr1 = [1, 2, 3, 4];
 // let arr2 = [3, 4, 5];
 
@@ -85,7 +86,7 @@ console.log(res2);
 // console.log(result); 
 
 
-//75
+//75 Rotate Array Right by 1
 // let arr = [1, 2, 3, 4];
 // let last = arr[arr.length - 1];
 // for (let i = arr.length - 1; i > 0; i--) {
@@ -94,7 +95,7 @@ console.log(res2);
 // arr[0] = last;
 // console.log(arr); 
 
-//76
+//76 Rotate Array Left by 1
 // let arr = [1, 2, 3, 4];
 // let res = [];
 // for (let i = 1; i < arr.length; i++) {
@@ -109,26 +110,26 @@ console.log(res2);
 // arr.push(add);
 // console.log(arr);
 
-//77
+//77 Count Elements Greater than Average
 // let arr = [1, 2, 3, 4, 5];
 // let sum = 0;
 // for (let i = 0; i < arr.length; i++) {
 //   sum += arr[i];
-// }
+// } 
 
 // let avg = sum / arr.length;
 
 // let count = 0;
-// for (let i = 0; i < arr.length; i++) {
+// for (let i = 0; i < arr.length; i++) { 
 //   if (arr[i] > avg) {
 //     count++;
 //   }
-// }
+// } 
 
 // console.log("Count =", count); 
 
 
-//78
+//78 Largest Positive and Smallest Negative
 // let arr=[1,2,3,5,10,19,20,-21];
 
 // let max=Math.max( ... arr);
@@ -157,7 +158,7 @@ console.log(res2);
 
 
 
-//79
+//79 Count 0s and 1s in Binary Array
 // let arr = [0, 1, 0, 1, 1];
 // let zeros = 0;
 // let ones = 0;
@@ -172,7 +173,7 @@ console.log(res2);
 // console.log("ones =", ones);
 
 
-//80
+//80 Separate Even and Odd into Two Arrays
 // let arr = [1, 2, 3, 4, 5];
 
 // let evens = [];

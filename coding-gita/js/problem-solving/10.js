@@ -1,4 +1,4 @@
-//91
+//91 Frequency of Numbers in Array (Object)
 // let arr = [1, 2, 2, 3];
 // let freq = {};
 
@@ -15,7 +15,7 @@
 // console.log(freq);
 
 
-//92
+//92 Most Frequent Number in Array
 // let arr = [1, 2, 2, 3];
 // let obj = {};
 
@@ -39,7 +39,7 @@
 
 
 
-//93
+//93 Character Frequency in String (Object)
 // let array = "hello";
 // let obj={};
 
@@ -54,7 +54,7 @@
 // }
 // console.log(obj);
 
-//94
+//94 Highest Marks from Array of Students
 // let arr = [{name:"A",marks:50},{name:"B",marks:80},{name:"C",marks:70}]
 
 // let maxmarks=0;
@@ -68,7 +68,7 @@
 // console.log(student)
 
 
-// Q95.
+// Q95. Total Cost from Product Price Object
 // function calculateTotalCost(prices) {
 //   let total = 0;
 //   for (let product in prices) {
@@ -81,7 +81,7 @@
 
 
 
-// // Q96.
+// // Q96. Average Marks from Subject-Marks Object
 // function calculateAverageMarks(marksObj) {
 //   let total = 0;
 //   let count = 0;
@@ -97,7 +97,7 @@
 
 
 
-// // Q97.
+// // Q97. Print All Keys of Object
 // function getObjectKeys(obj) {
 //   let keys = [];
 //   for (let key in obj) {
@@ -119,7 +119,7 @@
 
 
 
-// // Q98.
+// // Q98. Print All Values of Object
 // function getObjectValues(obj) {
 //   let values = [];
 //   for (let key in obj) {
@@ -140,7 +140,7 @@
 
 
 
-// // Q99.
+// // Q99. Count Key-Value Pairs in Object
 // function countProperties(obj) {
 //   let count = 0;
 //   for (let key in obj) {
@@ -154,7 +154,7 @@
 
 
 
-// // Q100.
+// // Q100. Filter Adults from Array of People
 // function filterAdults(people) {
 //   let adults = [];
 //   for (let i = 0; i < people.length; i++) {

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Buttons</title>
+</head>
+
+<body>
+
+    <button type="button" class="username">Store Username</button>
+    <button type="button" class="useremail">Store Email</button>
+    <button type="button" class="alt">Show Cookies</button>
+    <button type="button" class="delete">Delete Email</button>
+
+    <script>
+        var btn1 = document.querySelector('.username');
+        var btn2 = document.querySelector('.useremail');
+        var btn3 = document.querySelector('.alt');
+        var btn4 = document.querySelector('.delete');
+
+        // Store username cookie
+        btn1.addEventListener("click", () => {
+            document.cookie = "username=Arpan Shah; expires=Thu, 16 Dec 2025 12:00:00 UTC; path=/";
+            alert("Username stored");
+        });
+
+        // Store email cookie
+        btn2.addEventListener("click", () => {
+            document.cookie = "emailId=arpan18@gmail.com; expires=Thu, 16 Dec 2025 12:00:00 UTC; path=/";
+            alert("Email stored");
+        });
+
+        // Show cookies
+        btn3.addEventListener("click", () => {
+            alert("Cookies:\n" + document.cookie);
+        });
+
+        // Delete email cookie
+        btn4.addEventListener("click", () => {
+            document.cookie = "emailId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+            alert("Email cookie deleted");
+        });
+
+        console.log(typeof (document.cookie));
+
+        var data = document.cookie.split("; ");
+
+        console.log(data);
+
+        data.forEach((element) => {
+            var arr = element.split("=");
+            console.log(arr[1]);
+        })
+    </script>
+
+</body>
+
+</html>
+

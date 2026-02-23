@@ -231,6 +231,47 @@
   animation-duration: 1.5s;
   animation-fill-mode: forwards; /* Retains final opacity */
 }
+@keyframes freefalll {
+  0% { transform: translateY(0px)  }
+  30% { transform: translateY(0px); }
+  60% { transform: translateY(0px); }
+  80% { transform: translateY(180px) scaleX(1.2); }
+  100% { transform: translateY(180px) scaleX(1.2); }
+  
+}
+
+.freefall {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #27ae60;
+  animation: freefalll 3s infinite alternate;
+  transition: all .5s  ease-in-out; 
+}
+@keyframes flipingtext {
+  0% { transform: rotate3d(1,-4,-2, 45deg);
+       background-color: #d35400;
+       box-shadow: 0px 10px 20px black;  }
+  40% { transform: rotate3d(2,-1,0, 90deg);
+       background-color: #d35400;
+       box-shadow: 0px 20px 30px black;  }
+  80% { transform: rotate3d(1,1,0, 130deg);
+       background: url(https://wallpaper.dog/large/20414131.jpg);
+       box-shadow: -10px 15px 25px black;  }
+  100% { transform: rotate3d(1,2,1, 180deg);
+       background: url(https://wallpaper.dog/large/20414131.jpg);
+       box-shadow: 0px 25px 35px black;  }
+ 
+  
+}
+.textrotate{
+  height: 500px;
+  width: 500px;
+  background-color: #3498db;
+  margin-left: 600px;
+animation: flipingtext 5s infinite alternate;
+}
+
     </style>
 </head>
 <body>
@@ -256,5 +297,7 @@
     <div class="animation-timing-example1">Ease-in slide animation</div>
     <div class="animation-timing-example2">Bouncy scale animation</div>
     <div class="animation-fill-example1">Fade and stay opaque</div>
+    <div class="freefall"></div><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="textrotate"></div>
 </body>
 </html>

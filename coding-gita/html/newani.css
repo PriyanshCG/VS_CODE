@@ -1,0 +1,24 @@
+.practice {
+   position: relative;
+   height: 200px;
+   transition: all .4s ease;
+}
+.overlay{
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(75, 35, 196);
+    color: white;
+    opacity: 0;
+    transition: all .7s ease;
+}
+.practice:hover .overlay {
+    opacity: 1;
+    width: 200px;
+}
