@@ -26,6 +26,6 @@ int main() {
     Employee e3("Charlie");
     Employee e4("Diana");
     
-    cout << "total=" << Employee::getTotal() << endl;  // total=4
+    cout << "total=" << Employee::getTotal() << endl;  
     return 0;
 }
